@@ -16,7 +16,10 @@ function agregarArchivosGestor() {
 			respuesta = respuesta.trim();
 
 			if(respuesta == 1){
-				$('#tablaGestorArchivos').load('tablaGestor.php');
+				$('#frmArchivos')[0].reset();
+				$('#tablaGestorArchivos').load('tablaGestor.php', function () {
+					inicializarDataTable("#tablaGestorDataTable");
+				});
 				Swal.fire(":D", "Archivo agregado con éxito!", "success");
 			} else {
 				Swal.fire(":(", "Ha habido un error en la inserción!", "error");
@@ -26,9 +29,9 @@ function agregarArchivosGestor() {
 }
 
 function eliminarArchivo(idArchivo) {
-	let idArchivo = parseInt(idArchivo);
+	idArchivo = parseInt(idArchivo);
 	if(idArchivo < 1){
-		Swal.fire("Tu categoría no tiene id!");
+		Swal.fire("Tu archivo no tiene id!");
 		return false;
 	} else {
 		Swal.fire({
@@ -48,8 +51,11 @@ function eliminarArchivo(idArchivo) {
 					url: "processes/gestor/eliminarArchivo.php",
 					success:function(respuesta){
 						respuesta = respuesta.trim();
+						console.log(respuesta);
 						if(respuesta == 1){
-							$('#tablaGestorArchivos').load('tablaGestor.php');
+							$('#tablaGestorArchivos').load('tablaGestor.php', function () {
+								inicializarDataTable("#tablaGestorDataTable");
+							});
 							Swal.fire({
 								title: "Eliminado!",
 								text: "El archivo ha sido eliminado.",
@@ -63,4 +69,16 @@ function eliminarArchivo(idArchivo) {
 			}
 		});
 	}
+}
+
+function obtenerArchivoPorId(idArchivo) {
+	idArchivo = parseInt(idArchivo);
+	$.ajax({
+		type: "POST",
+		data: "idArchivo=" + idArchivo,
+		url: "processes/gestor/obtenerArchivo.php",
+		success:function(respuesta){
+			$('#archivoObtenido').html(respuesta);
+		}
+	});
 }

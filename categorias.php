@@ -1,5 +1,5 @@
 <?php
-session_start();
+	session_start();
 	
 	if (isset($_SESSION['usuario'])){
 		include "header.php";
@@ -25,7 +25,7 @@ session_start();
 			</section>
 		</main>
 
-		<!-- Modal: Agregar Categoría-->
+		<!------------- MODAL: AGREGAR CATEGORÍA ------------>
 		<div class="modal fade" id="modalAgregaCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
 			<div class="modal-dialog modal-sm">
 				<div class="modal-content">

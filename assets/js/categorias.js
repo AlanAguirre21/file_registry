@@ -14,7 +14,9 @@ function agregarCategoria() {
 			success:function(respuesta){
 				respuesta = respuesta.trim();
 				if(respuesta == 1){
-					$('#tablaCategorias').load("tablaCategoria.php");
+					$('#tablaCategorias').load("tablaCategoria.php", function () {
+						inicializarDataTable("#tablaCategoriaDataTable");
+					});
 					$('#nombreCategoria').val("");
 					Swal.fire(":D", "Agregado con éxito!", "success");
 				} else {
@@ -29,7 +31,7 @@ function agregarCategoria() {
 //******************** ELIMINAR CATEGORÍA ********************************
 
 function eliminarCategoria(idCategoria) {
-	let idCategoria = parseInt(idCategoria);
+	idCategoria = parseInt(idCategoria);
 	if(idCategoria < 1){
 		Swal.fire("Tu categoría no tiene id!");
 		return false;
@@ -52,7 +54,9 @@ function eliminarCategoria(idCategoria) {
 					success:function(respuesta){
 						respuesta = respuesta.trim();
 						if (respuesta == 1){
-							$('#tablaCategorias').load("tablaCategoria.php");
+							$('#tablaCategorias').load("tablaCategoria.php", function () {
+								inicializarDataTable("#tablaCategoriaDataTable");
+							});
 							Swal.fire({
 								title: "Eliminado!",
 								text: "La categoría ha sido eliminada.",
@@ -107,7 +111,9 @@ function actualizarCategoria() {
 				respuesta = respuesta.trim();
 
 				if (respuesta == 1){
-					$('#tablaCategorias').load("tablaCategoria.php");
+					$('#tablaCategorias').load("tablaCategoria.php", function () {
+						inicializarDataTable("#tablaCategoriaDataTable");
+					});
 					$('#btnCerrarUpdateCategoria').click();
 					Swal.fire({
 						title: "Actualizado",

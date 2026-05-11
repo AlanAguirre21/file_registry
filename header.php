@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>FileRegistry-Principal</title>
+	<title>FileRegistry</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -48,7 +48,7 @@
 				<ul class="nav d-flex gap-3">
 					<li class="nav-item">
 						<a class="nav-link" href="inicio.php">
-							<i class="bi bi-house-door"></i> <span>Home</span>
+							<i class="bi bi-house-door"></i> <span>Inicio</span>
 						</a>
 					</li>
 					<li class="nav-item">

@@ -23,17 +23,16 @@
 	        	AND archivos.id_usuario = '$idUsuario'";
 	$result = mysqli_query($conexion, $sql);
 ?>
-
 <div class="row">
 	<div class="col-sm-12">
 		<div class="table-responsive">
 			<table border=1 id='tablaGestorDataTable' class='table table-striped table-bordered table-hover'>
 				<thead>
 					<tr>
-						<th class="text-center">No.</th>
+						<th class="text-center">Nombre</th>
 						<th class="text-center">Fecha</th>
 						<th class="text-center">Recibo</th>
-						<th class="text-center">Nombre</th>
+						<th class="text-center">Categor&iacute;a</th>
 						<th class="text-center">Visualizaci&oacute;n</th>
 						<th class="text-center">Descargar</th>
 						<th class="text-center">Eliminar</th>
@@ -41,19 +40,38 @@
 				</thead>
 				<tbody>
 				<?php
+
+					//ARREGLO DE EXTENSIONES VÁLIDAS
+					$extensionesValidas = array('png', 'jpg', 'pdf', 'mp3', 'mp4');
+
 					while($mostrar = mysqli_fetch_array($result)) { 
 						$rutaDescarga = "archivos/".$idUsuario."/".$mostrar['nombreArchivo'];
 						$nombreArchivo = $mostrar['nombreArchivo'];
 						$idArchivo = $mostrar['idArchivo'];
 				?>
 					<tr>
-						<td><?php echo $mostrar['idArchivo']; ?></td>
-						<td><?php echo $mostrar['fecha']; ?></td>
-						<td><?php echo $mostrar['recibo']; ?></td>
 						<td><?php echo $mostrar['nombreArchivo']; ?></td>
-						<td></td>
+						<td class="text-center"><?php echo $mostrar['fecha']; ?></td>
+						<td><?php echo $mostrar['recibo']; ?></td>
+						<td><?php echo $mostrar['categoria']; ?></td>
+						<td>
+							<?php 
+								for ($i=0; $i < count($extensionesValidas); $i++) {
+									if ($extensionesValidas[$i] == $mostrar['tipoArchivo']){
+							?>
+
+							<span class="badge bg-dark" data-bs-toggle="modal" data-bs-target="#visualizarArchivo" onclick="obtenerArchivoPorId('<?php echo $idArchivo ?>')">
+							<i class="bi bi-eye"></i>
+							Visualizar
+							</span>
+
+							<?php
+									}
+								}
+							?>
+						</td>
 						<td class="text-center">
-							<a href="<?php echo $rutaDescarga; ?>" download="<?php echo $nombreArchivo; ?>" class="btn btn-info btn-sm">
+							<a href="<?php echo $rutaDescarga; ?>" download="<?php echo $nombreArchivo; ?>" class="badge bg-info">
 								<span class="text-light">
 									<i class="bi bi-arrow-down-square"></i>
 									Descargar Archivo
@@ -62,14 +80,14 @@
 						</td>
 
 						<td class="text-center">
-							<span class="badge bg-danger text-light" onclick="eliminarArchivo('<?php echo $idArchivo ?>')">
+							<span class="badge bg-danger text-light" 
+								onclick="eliminarArchivo('<?php echo $idArchivo ?>')">
 								<i class="bi bi-trash"></i>
 								Eliminar
 							</span>
 						</td>
-
 					</tr>
-				<?php 
+				<?php
 					}
 				?>
 				</tbody>
@@ -77,11 +95,7 @@
 		</div>
 	</div>
 </div>
-
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#tablaGestorDataTable').DataTable();
-	});
 	$(document).ready(function(){
 		$('#tablaGestorDataTable').DataTable();
 	});

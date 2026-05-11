@@ -1271,7 +1271,7 @@ h6 {
 .footer .credits {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: 18px;
   color: #012970;
 }
 
@@ -1285,4 +1285,12 @@ h6 {
 .divFrmArchivos .prube-label{
   margin-top: 25px;
   margin-bottom: 10px;
+}
+
+thead {
+  text-align: center;
+}
+
+tbody {
+  text-align: center;
 }

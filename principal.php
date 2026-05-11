@@ -80,17 +80,39 @@
 			</div>
 		</div>
 
-<?php include "footer.php"; ?>
+		<!-------------- MODAL VISUALIZAR ARCHIVOS --------------->
+		<div class="modal fade" id="visualizarArchivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Archivo</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						</button>
+					</div>
+					<div class="modal-body text-center">
+						<!-- Contenido del Modal -->
+						<div id="archivoObtenido"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php 
+			include "footer.php"; 
+		?>
 		<script src="assets/js/dataTable.js"></script>
 		<script src="assets/js/gestor.js"></script>
 		<script type="text/javascript">
+			
 			$(document).ready(function(){
 				$('#tablaGestorArchivos').load("tablaGestor.php", function () {
 
 		    		// Aquí inicializas DataTable para la tabla con el ID #tablaGestorDataTable
 					inicializarDataTable("#tablaGestorDataTable");
-
-				});
+					});
+				
 				$('#categoriasLoad').load("vistas/categorias/selectCategorias.php");
 				$('#btnGuardarArchivos').click(function(){
 					agregarArchivosGestor();

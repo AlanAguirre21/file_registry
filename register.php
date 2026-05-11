@@ -57,53 +57,53 @@
 									</div>
 
 								<form id="frmRegistro" class="row g-3 needs-validation" method="POST" onsubmit="return agregarUsuarioNuevo()" novalidate>
-								<div class="col-12">
-									<label for="user_firstname" class="form-label">Nombre</label>
-									<input type="text" name="user_firstname" class="form-control" id="user_firstname" required>
-									<div class="invalid-feedback">Ingresa tu nombre!</div>
-								</div>
+									<div class="col-12">
+										<label for="user_firstname" class="form-label">Nombre</label>
+										<input type="text" name="user_firstname" class="form-control" id="user_firstname" required>
+										<div class="invalid-feedback">Ingresa tu nombre!</div>
+									</div>
 
-								<div class="col-12">
-									<label for="user_lastname" class="form-label">Apellidos</label>
-									<input type="text" name="user_lastname" class="form-control" id="user_lastname" required>
-									<div class="invalid-feedback">Ingresa tus apellidos!</div>
-								</div>
+									<div class="col-12">
+										<label for="user_lastname" class="form-label">Apellidos</label>
+										<input type="text" name="user_lastname" class="form-control" id="user_lastname" required>
+										<div class="invalid-feedback">Ingresa tus apellidos!</div>
+									</div>
 
-								<div class="col-12">
-									<label for="username" class="form-label">Nombre de usuario</label>
-									<input type="text" name="username" class="form-control" id="username" required>
-									<div class="invalid-feedback">Ingresa un nombre de usuario!</div>
-								</div>
-
-								<div class="col-12">
-									<label for="user_rol" class="form-label">Rol de usuario</label>
-									<div class="input-group has-validation">
-										<select type="text" name="user_rol" class="form-control" id="user_rol" required>
-											<option value="1">Usuario</option>
-											<option value="2">Administrador</option>
-										</select>
+									<div class="col-12">
+										<label for="username" class="form-label">Nombre de usuario</label>
+										<input type="text" name="username" class="form-control" id="username" required>
 										<div class="invalid-feedback">Ingresa un nombre de usuario!</div>
 									</div>
-								</div>
 
-								<div class="col-12">
-									<label for="user_password" class="form-label">Contrase&ntilde;a</label>
-									<div class="input-group">
-										<input type="password" name="user_password" class="form-control" id="user_password" required>
-										<button class="btn position-absolute end-0 top-50 translate-middle-y me-2 p-0 border-0 bg-transparent" type="button" id="togglePassword">
-											<i class="bi bi-eye"></i>
-										</button>
+									<div class="col-12">
+										<label for="user_rol" class="form-label">Rol de usuario</label>
+										<div class="input-group has-validation">
+											<select type="text" name="user_rol" class="form-control" id="user_rol" required>
+												<option value="1">Usuario</option>
+												<option value="2">Administrador</option>
+											</select>
+											<div class="invalid-feedback">Ingresa un nombre de usuario!</div>
+										</div>
 									</div>
-								<div class="invalid-feedback">Ingresa una contrase&ntilde;a!</div>
-								</div>
+
+									<div class="col-12">
+										<label for="user_password" class="form-label">Contrase&ntilde;a</label>
+										<div class="input-group">
+											<input type="password" name="user_password" class="form-control" id="user_password" required>
+											<button class="btn position-absolute end-0 top-50 translate-middle-y me-2 p-0 border-0 bg-transparent" type="button" id="togglePassword">
+												<i class="bi bi-eye"></i>
+											</button>
+										</div>
+									<div class="invalid-feedback">Ingresa una contrase&ntilde;a!</div>
+									</div>
 
 
-								<div class="col-12">
-									<button class="btn btn-primary w-100" type="submit">Crear cuenta</button>
-								</div>
-								<div class="col-12">
-									<p class="small mb-0">Ya tienes una cuenta? <a href="index.php">Iniciar sesi&oacute;n</a></p>
-								</div>
+									<div class="col-12">
+										<button class="btn btn-primary w-100" type="submit">Crear cuenta</button>
+									</div>
+									<div class="col-12">
+										<p class="small mb-0">Ya tienes una cuenta? <a href="index.php">Iniciar sesi&oacute;n</a></p>
+									</div>
 								</form>
 
 								</div>

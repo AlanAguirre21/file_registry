@@ -1,0 +1,10 @@
+RewriteEngine on
+Options -Indexes
+
+# Bloquear archivos específicos
+#<Files "config.php">
+#  Deny from all
+#</Files>
+
+# O bloquear acceso directo a la carpeta
+#Deny from all

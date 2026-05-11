@@ -86,7 +86,7 @@ tablas interactivas y gestionar un repositorio digital eficiente.
 
 ## Estado
 
-🚧 En desarrollo - Corrigiendo errores y optimizando funcionalidades
+Terminado
 
 ## Autor
 

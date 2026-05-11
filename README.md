@@ -1,93 +1,86 @@
 # file_registry
-Aplicación web diseñada como gestor de archivos para digitalizar, organizar y clasificar documentos físicos de forma centralizada y eficiente.
+Web application designed as a file manager to digitize, organize, and classify physical documents in a centralized and efficient manner.
 
-## Descripción
+## Description
+FileRegistry is a web solution designed to centralize and organize scattered documents. It allows you to categorize files, view them in interactive tables, and manage an efficient digital repository.
 
-FileRegistry es una solución web diseñada para centralizar y organizar 
-documentos dispersos. Permite categorizar archivos, visualizarlos en 
-tablas interactivas y gestionar un repositorio digital eficiente.
+## Features
+- Organization of documents by categories
+- Visualization in interactive tables
+- Search and filtering system
+- Intuitive and responsive interface
 
-## Características
-
-- Organización de documentos por categorías
-- Visualización en tablas interactivas
-- Sistema de búsqueda y filtrado
-- Interfaz intuitiva y responsiva
-
-## Tecnologías Utilizadas
-
+## Technologies Used
 - **Backend**: PHP
 - **Frontend**: HTML, CSS, JavaScript
 - **Editor**: Sublime Text
 
-## Instalación
+## Installation
 
-### Requisitos Previos
+### Prerequisites
 - Apache
 - MySQL
-- PHP 7.0 o superior
+- PHP 7.0 or higher
 - jQuery 3.7.1
 
-### Pasos de Instalación
+### Installation Steps
 
-1. **Clonar o descargar el repositorio**
+1. **Clone or download the repository**
 ```bash
-   git clone https://github.com/AlanAguirre21/FileRegistry.git
-   cd FileRegistry
+   git clone https://github.com/AlanAguirre21/file_registry.git
+   cd file_registry
 ```
 
-2. **Configurar la base de datos**
-   - Crear una base de datos en MySQL
-   - Importar el archivo de estructura de base de datos (si existe)
-   - Editar el archivo `conexionBD.php` con las credenciales de tu servidor MySQL:
+2. **Configure the database**
+   - Create a database in MySQL
+   - Import the database structure file (if it exists)
+   - Edit the `conexionBD.php` file with your MySQL server credentials:
 ```php
      $host = "localhost";
-     $user = "tu_usuario";
-     $password = "tu_contraseña";
-     $database = "nombre_bd";
+     $user = "your_user";
+     $password = "your_password";
+     $database = "database_name";
 ```
 
-3. **Colocar archivos en el servidor Apache**
-   - Copiar todos los archivos del proyecto a la carpeta `htdocs` de Apache
+3. **Place files on the Apache server**
+   - Copy all project files to Apache's `htdocs` folder
 
-4. **Verificar dependencias**
-   - Asegurar que jQuery 3.7.1 esté incluido en el proyecto
+4. **Verify dependencies**
+   - Ensure that jQuery 3.7.1 is included in the project
 
-5. **Acceder a la aplicación**
-   - Abrir el navegador e ingresar a `http://localhost`
+5. **Access the application**
+   - Open your browser and navigate to `http://localhost`
 
-## Uso
+## Usage
 
-### Acceso a la Aplicación
+### Accessing the Application
 
-1. **Crear una cuenta de usuario**
-   - En la pantalla de login, selecciona la opción de registro
-   - Completa los datos requeridos y crea tu usuario
+1. **Create a user account**
+   - On the login screen, select the registration option
+   - Complete the required information and create your user
 
-2. **Iniciar sesión**
-   - Ingresa con tu usuario y contraseña
+2. **Log in**
+   - Enter your username and password
 
-### Funcionalidades Principales
+### Main Features
 
-#### Gestión de Categorías
-- Accede a la sección **"Categorías"**
-- Crea nuevas categorías para organizar tus documentos
-- Las categorías se visualizan en una tabla donde puedes editarlas o eliminarlas
+#### Category Management
+- Access the **"Categories"** section
+- Create new categories to organize your documents
+- Categories are displayed in a table where you can edit or delete them
 
-#### Administración de Documentos
-- Dirígete a la sección **"Administración"**
-- Carga documentos usando el formulario de subida
-- Asigna cada documento a una categoría específica
-- Los documentos se organizan en una tabla para fácil visualización
+#### Document Management
+- Go to the **"Administration"** section
+- Upload documents using the upload form
+- Assign each document to a specific category
+- Documents are organized in a table for easy viewing
 
-#### Visualización y Descarga
-- En la tabla de documentos, puedes **visualizar** archivos directamente
-- También puedes **descargar** archivos a tu equipo
+#### Viewing and Downloading
+- In the documents table, you can **view** files directly
+- You can also **download** files to your computer
 
-## Estado
+## Status
+Completed
 
-Terminado
-
-## Autor
-
+## Author
 Alan Haziel Aguirre García
